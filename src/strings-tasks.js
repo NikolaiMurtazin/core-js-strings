@@ -151,7 +151,7 @@ function repeatString(str, times) {
  */
 function removeFirstOccurrences(str, value) {
   const index = str.indexOf(value);
-  if (index === -1) return str; // если нет подстроки
+  if (index === -1) return str;
   return str.slice(0, index) + str.slice(index + value.length);
 }
 
@@ -186,7 +186,7 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes() => 0
  */
 function sumOfCodes(str) {
-  if (typeof str !== 'string') return 0; // обработка undefined и других типов
+  if (typeof str !== 'string') return 0;
   let sum = 0;
   for (let i = 0; i < str.length; i += 1) {
     sum += str.charCodeAt(i);
@@ -474,7 +474,7 @@ function encodeToRot13(str) {
       if (code >= 97 && code <= 122) {
         return String.fromCharCode(((code - 97 + 13) % 26) + 97);
       }
-      return char; // не буква — оставляем без изменений
+      return char;
     })
     .join('');
 }
